@@ -1,6 +1,3 @@
-import java.util.Scanner;
-import java.util.function.DoubleToIntFunction;
-
 public class HelloWorld {
     public static void main(String[] args) {
         /*
@@ -88,8 +85,8 @@ public class HelloWorld {
         System.out.println(x10); // 0
 
         System.out.println("----------");
-        Person p = new Person();
-        System.out.println(p.age);
+//        Employee p = new Employee();
+//        System.out.println(p.age);
 
         System.out.println("----------");
     }
