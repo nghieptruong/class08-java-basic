@@ -1,9 +1,20 @@
+package firstpackage;
+
+import secondpackage.Employee;
+
 public class HREmployee extends Employee {
 
     private String deptNo;
 
+    static String companyName = "ABC123";
+
     public HREmployee() {
         deptNo = "100";
+    }
+
+    public HREmployee(String name, int age, String address, boolean isMarried, String deptNo) {
+        super(name, age, address, isMarried); //goi construct của cha
+        this.deptNo = deptNo;
     }
 
     public String getDeptNo() {
@@ -25,5 +36,10 @@ public class HREmployee extends Employee {
 
     public void interview() {
         System.out.println("Interviewing...");
+    }
+
+    public void printHRSalary() {
+        super.printSalary(); // Printing Salary...
+        System.out.println("This is HR Salary ...");
     }
 }

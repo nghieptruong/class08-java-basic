@@ -85,7 +85,7 @@ public class HelloWorld {
         System.out.println(x10); // 0
 
         System.out.println("----------");
-//        Employee p = new Employee();
+//        secondpackage.Employee p = new secondpackage.Employee();
 //        System.out.println(p.age);
 
         System.out.println("----------");

@@ -1,3 +1,5 @@
+package secondpackage;
+
 public class Employee {
 
     //Thuoc tinh (attribute), instance variable
@@ -7,11 +9,23 @@ public class Employee {
     private boolean isMarried; // gia tri default false
 
     //Constructor (hàm khởi tạo)
-    Employee() {
+    public Employee() {
         name = "John";
         age = 30;
         address = "USA";
         isMarried = false;
+    }
+
+    public Employee(String name) {
+        this.name = name;
+    }
+
+    //Constructor có tham số
+    public Employee(String name, int age, String address, boolean isMarried) {
+        this(name);//constructor chaining -> goi constructor 1 tham so o trên
+        this.age = age;
+        this.address = address;
+        this.isMarried = isMarried;
     }
 
     //hàm getter
@@ -49,7 +63,11 @@ public class Employee {
     }
 
     //Method (hành vi/phương thức)
-    public void work() {
+    protected void work() {
         System.out.println("Working...");
+    }
+
+    public void printSalary() {
+        System.out.println("Printing Salary...");
     }
 }

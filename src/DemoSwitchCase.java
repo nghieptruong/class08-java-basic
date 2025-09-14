@@ -12,7 +12,7 @@ public class DemoSwitchCase {
 //                System.out.println("khong thoa dieu kien nao het");
 //        }
 
-        String browser = "Edge";
+//        String browser = "edge"; // lỗi bất cẩn --> truyền sai
 //        switch (browser) {
 //            case "Chrome":
 //            case "Firefox":
@@ -22,14 +22,28 @@ public class DemoSwitchCase {
 //                System.out.println("Run on Windows platform");
 //                break;
 //            default:
-//                System.out.println("Run on Mac platform\"");
+//                System.out.println("Run on Mac platform");
 //        }
 
-        if(browser.equals("Chrome") || browser.equals("Firefox") || browser.equals("Edge") || browser.equals("Chrome_Headless")) {
-            System.out.println("Run on Windows platform");
-        } else{
-            System.out.println("Run on Mac platform\"");
+        BrowserType type = BrowserType.EDGE;
+        switch (type) {
+            case CHROME:
+            case FIREFOX:
+            case EDGE:
+            case CHROME_HEADLESS:
+            case FIREFOX_HEADLESS:
+                System.out.println("Run on Windows platform");
+                break;
+            default:
+                System.out.println("Run on Mac platform");
         }
+
+
+//        if(browser.equals("Chrome") || browser.equals("Firefox") || browser.equals("Edge") || browser.equals("Chrome_Headless")) {
+//            System.out.println("Run on Windows platform");
+//        } else{
+//            System.out.println("Run on Mac platform\"");
+//        }
 
     }
 }
