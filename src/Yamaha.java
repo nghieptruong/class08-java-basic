@@ -9,4 +9,9 @@ public class Yamaha extends Machine implements Vehicle {
     public void run() {
         System.out.println("Yamaha run");
     }
+
+    @Override
+    public void producedBy() {
+        System.out.println("Yamaha made by China");
+    }
 }
